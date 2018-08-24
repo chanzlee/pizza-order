@@ -5,3 +5,7 @@ button {
 #confirmation {
   display: none;
 }
+
+#confirmation p {
+  text-transform: capitalize;
+}
