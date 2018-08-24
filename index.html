@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Order</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pizza Order</h1>
+      <form>
+        <div class="form-group row">
+          <label for="topping" class="col-sm-2 col-form-label">Topping</label>
+          <div class="col-sm-10">
+          <select id="topping" class="form-control">
+            <option selected>Brooklyn Style<option>
+            <option>Hand Tossed</option>
+            <option>Crunchy Thin Crust</option>
+          </select>
+          </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="topping1">
+          <label class="form-check-label" for="topping1">
+            Pepperoni
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="topping2">
+          <label class="form-check-label" for="topping2">
+            Beef
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="topping3">
+          <label class="form-check-label" for="topping3">
+            Ham
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="topping4">
+          <label class="form-check-label" for="topping4">
+            Philly Steak
+          </label>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Size</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="size" id="size1" value="option1" checked>
+                <label class="form-check-label" for="size1">
+                  Small
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="size" id="size2" value="option2">
+                <label class="form-check-label" for="size2">
+                  Medium
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="size" id="size3" value="option3">
+                <label class="form-check-label" for="size3">
+                  Large
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group row">
+          <div class="col-sm-2">Checkbox</div>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="special-intruction">
+              <label class="form-check-label" for="special-intruction">
+                Spicial instruction
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Order</button>
+          </div>
+        </div>
+      </form>
+
+
+    <div id="confirmation">
+      <h2>Your Order</h2>
+
+      <p>size: <span class="size"></span></p>
+      <p>topping: <span class="topping"></span></p>
+      <p>price: <span class="price"></span></p>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
