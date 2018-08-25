@@ -1,12 +1,15 @@
+// Back-end ////////////////////////////////////////////
 //Arrays for pizza text outputs
 var crustArray = ["Brooklyn Style","Hand Tossed","Crunchy Thin Crust"];
 var toppingArray = ["Pepperoni", "Beef", "Ham", "Philly Steak"];
 var sizeArray = ["Small", "Medium", "Large", "X-Large"];
 
 
-var orders= {};
+// global variables
 var orderIndex = 0;
 
+
+//Contructors and prototype function.
 //Food class will be used to make menus including pizza.
 function Food(toppingList, toppingCount, size, basePrice) {
   this.toppingList = toppingList;
@@ -21,14 +24,12 @@ function Pizza(toppingList, toppingCount, size, basePrice, crust) {
   this.crust = crust;
 }
 
-//Create Pizza class from Food Class.
-// Pizza.prototype = Object.create(Food.prototype);
-// Pizza.prototype.constructor = Pizza;
-
 Pizza.prototype.calcPrice = function () {
   this.price += (this.toppingCount-1)*2 + (this.size)*4 +(this.crust)*1;
 };
 
+
+// Functions
 function textConfirm(crust, topping, size, price, addConfirm){
   $("#confirm-list").show();
   var sizeInputText = sizeArray[size];
@@ -36,10 +37,8 @@ function textConfirm(crust, topping, size, price, addConfirm){
   if (!topping) {
     topping = "None";
   }
-
   orderIndex++;
   confirmAppender();
-
   $("div.append:last").html(addConfirm);
   $(".append:last-child .index").text(orderIndex);
   $(".append:last-child .crust").text(crustInputText);
@@ -51,6 +50,8 @@ function textConfirm(crust, topping, size, price, addConfirm){
 function confirmAppender(){
   $("#confirm-list").append("<br><div class='append'></div>");
 }
+
+
 
 //Front-end ///////////////////////////////////////////////
 $(document).ready(function(){
@@ -82,6 +83,9 @@ $(document).ready(function(){
 
     textConfirm(pizzaInstance.crust, pizzaInstance.toppingList, pizzaInstance.size, pizzaInstance.price, addConfirm);
 
+    $("#pizza-builder")[0].reset();
+
+  });
   // Click function linked to clickable appended orders.
   $(".clickable").last().click(function(){
     $(this).next(".detail").toggle();
@@ -89,9 +93,6 @@ $(document).ready(function(){
 
   // var priceInputText = this.price(...arg);
 
-  $("#pizza-builder")[0].reset();
-
-  });
 
   $("#add").click(function(){
 
