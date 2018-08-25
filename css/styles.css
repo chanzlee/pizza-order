@@ -60,6 +60,15 @@ button {
   float: right;
 }
 
-#confirmation p {
+#confirm-list {
+  display: none;
   text-transform: capitalize;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.detail {
+  display: none;
 }
