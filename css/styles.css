@@ -1,5 +1,5 @@
-body {
-  font-family: 'Crete Round', serif;
+* {
+  box-sizing: border-box;
 }
 
 header {
@@ -13,8 +13,7 @@ header {
   height: 100%;
   padding: 80px 0;
 }
-
-header h1{
+header h1 {
   text-transform: uppercase;
   color: white;
   font-weight: bolder;
@@ -24,24 +23,74 @@ header h1{
   background-color: rgba(180,0,0,0.3);
 }
 
-h1, h2 {
+
+body {
+  font-family: 'Crete Round', serif;
+}
+h1{
   margin: 50px 0;
 }
-
+h2 {
+  margin: 30px 0;
+}
 form {
   border-radius: 15px;
   background-color: rgba(140,0,30,0.2);
   padding: 35px;
 }
-
-.col-sm-2 {
+.col-md-2 {
   font-size: 17px;
   text-transform: uppercase;
 }
-
-.confirm {
+.cart-item {
   margin: 30px 0;
 }
+button {
+  margin 10px 0;
+  width: 90px;
+  float: right;
+}
+
+
+#cart-list {
+  float: left;
+  display: none;
+  text-transform: capitalize;
+  margin: 5px 5px;
+  background-color: rgba(0,20,90,0.1);
+  padding: 15px 40px;
+  border-radius: 15px;
+}
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  text-decoration: underline;
+}
+.cart-item {
+
+  padding: 15px 40px;
+  border-radius: 5px;
+}
+.detail {
+  display: none;
+  background-color: rgba(0,20,90,0.2);
+  padding: 5px;
+  border-radius: 15px;
+}
+.total {
+  display: none;
+  background-color: rgba(255,250,205,0.5);
+  padding: 15px 40px;
+  border-radius: 15px;
+  margin: 5px;
+  float: right;
+}
+.row.result {
+  margin: 30px;
+}
+
+
 footer {
   margin-top: 100px;
   text-align: center;
@@ -51,24 +100,6 @@ footer {
   padding:0;
   height: 80px;
 }
-
 footer p {
-  font-size: 11px
-}
-
-button {
-  float: right;
-}
-
-#confirm-list {
-  display: none;
-  text-transform: capitalize;
-}
-
-.clickable {
-  cursor: pointer;
-}
-
-.detail {
-  display: none;
+  font-size: 11px;
 }
