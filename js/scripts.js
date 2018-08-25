@@ -109,7 +109,7 @@ $(document).ready(function(){
 
   $("#order").click(function(){
     $(".total").hide();
-    $(".total").fadeIn(700);
+    $(".total").fadeIn(1000);
     $(".total-pizza").text(" "+totalPizza);
     $(".total-price").text(" "+totalPrice);
   });
