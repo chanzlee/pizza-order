@@ -45,7 +45,6 @@ $(document).ready(function(){
 
   var crustInputValue = parseInt($("#crust").val());
   var crustInputText = crustArray[crustInputValue]
-  console.log("crustInputText"+crustInputText);
 
   var toppingCount=0;
   var toppingInputText =[];
@@ -57,16 +56,9 @@ $(document).ready(function(){
   typeof topppingInputText;
   typeof topppingCount;
 
-  console.log("toppingCount"+toppingCount);
-  console.log("toppingInputText"+toppingInputText);
-
   var sizeInputValue = parseInt($("input:radio[name=size]:checked").val());
 
   var pizzaInstance = new Pizza (toppingInputText, toppingCount, sizeInputValue, 8, crustInputValue);
-  console.log(pizzaInstance.crust)
-  console.log(pizzaInstance.toppingList);
-  console.log(pizzaInstance.toppingCount)
-  console.log(pizzaInstance.price)
 
   pizzaInstance.calcPrice();
   textConfirm(pizzaInstance.crust, pizzaInstance.toppingList, pizzaInstance.size, pizzaInstance.price);
