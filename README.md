@@ -6,7 +6,7 @@
 
 ## Description
 
-_This webpage will take order from user and calculate the price based on toppings and size. Options consist of crust type, toppings, size. It will return the results after submitting the form through order button, which will be displayed in the bottom of the page._
+_This webpage will take order from user and calculate the price based on toppings and size. Options consist of crust type, toppings, size. It will return the results after submitting the form through order button, which will be displayed in the bottom of the page. Working webpage posted on https://goenchan.github.io/pizza-order/_
 
 ## Specs
 
@@ -17,8 +17,8 @@ _This webpage will take order from user and calculate the price based on topping
 | The program prints out results price and inputted value in texts in confirmation section. | Choose Thin crust/ Ham/ Large | price: $18 |
 ## Setup/Installation Requirements
 
-* Open file in a web browser.
 * Clone the repository.
+* Open html file in a web browser.
 
 ## Known Bugs
 
